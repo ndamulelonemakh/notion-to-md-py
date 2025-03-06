@@ -1,7 +1,5 @@
 import base64
 import re
-from tkinter.ttk import Style
-
 import httpx
 from typing import Optional, Dict, List
 from pytablewriter import MarkdownTableWriter
@@ -39,7 +37,7 @@ def link(text: str, href: str) -> str:
 def code_block(text: str, language: Optional[str] = None) -> str:
     if language == "plain text":
         language = "text"
-    return f'```{language or ""}\n{text}\n```'
+    return f"```{language or ''}\n{text}\n```"
 
 
 def equation(text: str) -> str:
@@ -129,7 +127,7 @@ def divider() -> str:
 def toggle(summary: Optional[str] = None, children: Optional[str] = None) -> str:
     if not summary:
         return children or ''
-    return f'<details><summary>{summary}</summary>{children or ''}</details>'
+    return f'<details><summary>{summary}</summary>{children or ""}</details>'
 
 
 def table(cells: List[List[str]]) -> str:
