@@ -1,6 +1,6 @@
 [project]
 name = "notion_to_md"
-version = "0.1.0"
+version = "0.1.2"
 description = "A package to convert Notion content into Markdown format"
 authors = [{ name = "Wei Xiang", email = "xiangweiqaz@gmail.com" }]
 readme = "README.md"
