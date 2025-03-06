@@ -1,6 +1,6 @@
 # notion-to-md (Python Version)
 
-This is the **Python implementation** of nodejs version of [notion-to-md](https://github.com/souvikinator/notion-to-md), 
+This is the **Python implementation** of nodejs version of [notion-to-md](https://github.com/souvikinator/notion-to-md),
 a tool that converts Notion pages into Markdown files.
 
 ## Installation
@@ -36,6 +36,7 @@ with open("output.md", "w") as f:
 ```
 
 ### Async Version
+
 ```python
 import asyncio
 from notion_client import AsyncClient
@@ -65,11 +66,44 @@ Replace `your-auth-token` and `page-id` with the appropriate values from your No
 2. Share your database with the integration to allow access.
 3. Retrieve your `Database ID` and `Page ID` from the Notion app.
 
-
 ## Requirements
 
-- Python 3.7 or later
+- Python 3.11 or later
 - Notion API key
+
+## Testing
+
+You can run tests using either tox (for testing across multiple Python versions) or pytest directly.
+
+### Running tests with tox
+
+Tox allows you to test the package against multiple Python environments:
+
+```bash
+# Install tox
+pip install tox
+
+# Run tests on all supported Python versions
+tox
+
+# Run tests on a specific Python version
+tox -e py311
+```
+
+### Running tests with pytest
+
+For quicker test runs during development:
+
+```bash
+# Install test dependencies
+pip install pytest
+
+# Run all tests
+pytest
+
+# Run tests with coverage report
+pytest --cov=notion_to_md
+```
 
 ## Limitations
 
